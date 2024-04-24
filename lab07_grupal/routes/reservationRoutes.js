@@ -3,7 +3,7 @@ import { getFlights, getFlightById, createFlight, updateFlight, deleteFlight } f
 
 const router = express.Router();
 
-// Ruta para crear una nueva reserva
+//Ruta para crear una nueva reserva
 router.get('/', getFlights);
 router.get('/:id', getFlightById);
 

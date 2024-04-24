@@ -8,6 +8,7 @@ import hotelRoutes from './routes/hotelRoutes.js';
 import reservationRoutes from './routes/reservationRoutes.js';
 import tourRoutes from './routes/tourRoutes.js';
 import customerRoutes from './routes/customerRoutes.js';
+import ticketRoutes from './routes/ticketRoutes.js';
 
 
 dotenv.config();
