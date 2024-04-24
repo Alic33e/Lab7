@@ -10,8 +10,6 @@ router.get('/', getReservations);
 router.get('/:id', getReservationById);
 
 //Ruta para crear una nueva reserva
-router.get('/', getFlights);
-router.get('/:id', getFlightById);
 
 
 // Rutas para crear, actualizar y eliminar reservaciones
