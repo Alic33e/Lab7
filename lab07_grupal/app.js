@@ -18,6 +18,21 @@ app.get("/", (req, res) => {
   res.sendFile(process.cwd() + "/views/index.html");
 });
 
+app.get("/about", (req, res) => {
+  res.sendFile(process.cwd() + "/views/about.html");
+});
+
+app.get("/contact", (req, res) => {
+  res.sendFile(process.cwd() + "/views/contact.html");
+});
+
+
+app.get("/tours", (req, res) => {
+  res.sendFile(process.cwd() + "/views/tours.html");
+});
+
+
+
 app.listen(port, () => {
   console.log(`Server is runing on port ${port}`);
 });
