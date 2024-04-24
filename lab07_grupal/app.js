@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import logger from "morgan";
 import cors from "cors";
 import { connectDB } from "./database/mongo.js";
+import flyRoutes from './routes/flyRoutes.js';
+
 
 dotenv.config();
 
@@ -18,6 +20,9 @@ connectDB().then(() => {
  });
 
 app.use(cors("*"));
+
+// Utilizar las rutas de vuelos
+app.use('/flights', flyRoutes);
 
 app.use(logger("dev"));
 
