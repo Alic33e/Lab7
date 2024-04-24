@@ -4,6 +4,10 @@ import logger from "morgan";
 import cors from "cors";
 import { connectDB } from "./database/mongo.js";
 import flyRoutes from './routes/flyRoutes.js';
+import hotelRoutes from './routes/hotelRoutes.js';
+import reservationRoutes from './routes/reservationRoutes.js';
+import tourRoutes from './routes/tourRoutes.js';
+import customerRoutes from './routes/customerRoutes.js';
 
 
 dotenv.config();
