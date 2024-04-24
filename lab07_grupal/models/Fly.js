@@ -1,7 +1,7 @@
 import mongoose from "mongoose"
 const { Schema } = mongoose;
 
-const Fly = new Schema({
+const FlySchema = new Schema({
     origin_lat: { type: Number, required: true },
     origin_lng: { type: Number, required: true },
     destiny_lng: { type: Number, required: true},
@@ -11,4 +11,4 @@ const Fly = new Schema({
     aero_line: { type: String, required: true }
 });
 
-export default mongoose.model('Fly', Fly);
+export default mongoose.model('Fly', FlySchema);
