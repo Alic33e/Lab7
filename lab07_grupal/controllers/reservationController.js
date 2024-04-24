@@ -1,7 +1,8 @@
-import Reservation from '../ReservationModel'; // Ajusta la ruta según tu estructura de archivos
+import Reservation from '../Reservation.js'; // Ajusta la ruta según tu estructura de archivos
 
 // Controlador para manejar las operaciones relacionadas con las reservas
 const reservationController = {
+  
   // Crea una nueva reserva
   createReservation: async (req, res) => {
     try {

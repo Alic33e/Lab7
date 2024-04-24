@@ -1,15 +1,19 @@
 import express from 'express';
-import { getFlights, getFlightById, createFlight, updateFlight, deleteFlight } from '../controllers/reservationController';
+import { getFlights, 
+    getReservationById, 
+    createReservation, 
+    updateReservation, 
+    deleteReservation } from '../controllers/reservationController.js';
 
 const router = express.Router();
 
 // Ruta para crear una nueva reserva
 router.get('/', getFlights);
-router.get('/:id', getFlightById);
+router.get('/:id', getReservationById);
 
 // Rutas para crear, actualizar y eliminar vuelos
-router.post('/', createFlight);
-router.put('/:id', updateFlight);
-router.delete('/:id', deleteFlight);
+router.post('/', createReservation);
+router.put('/:id', updateReservation);
+router.delete('/:id', deleteReservation);
 
 export default router;
