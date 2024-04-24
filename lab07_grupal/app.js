@@ -21,8 +21,14 @@ connectDB().then(() => {
 
 app.use(cors("*"));
 
-// Utilizar las rutas de vuelos
+// Utilizar las rutas de los controladores.
+app.use('/customer', customerRoutes);
 app.use('/flights', flyRoutes);
+app.use('/hotel', hotelRoutes);
+app.use('/reservation', reservationRoutes);
+app.use('/ticket', ticketRoutes);
+app.use('/tour', tourRoutes);
+
 
 app.use(logger("dev"));
 
