@@ -50,8 +50,24 @@ app.get("/", (req, res) => {
     res.sendFile(process.cwd() + "/views/contact.html");
   });
   
-  
-  app.get("/tours", (req, res) => {
-    res.sendFile(process.cwd() + "/views/tours.html");
+  app.get("/accomodation", (req, res) => {
+    res.sendFile(process.cwd() + "/views/accomodation.html");
   });
+
+  app.get("/blog-single", (req, res) => {
+    res.sendFile(process.cwd() + "/views/blog-single.html");
+  });
+
+  app.get("/blog", (req, res) => {
+    res.sendFile(process.cwd() + "/views/blog.html");
+  });
+
+  app.get("/elements", (req, res) => {
+    res.sendFile(process.cwd() + "/views/elements.html");
+  });
+
+  app.get("/gallery", (req, res) => {
+    res.sendFile(process.cwd() + "/views/gallery.html");
+  });
+
 });
