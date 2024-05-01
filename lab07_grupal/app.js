@@ -42,7 +42,7 @@ app.get("/", (_, res) => {
   res.sendFile(process.cwd() + "/views/index.html");
 
   app.get("/hotels", (_, res) => {
-    res.sendFile(process.cwd() + "/views/hotel.html");
+    res.sendFile(process.cwd() + "/views/hotels.html");
   });
 
   app.get("/flights", (_, res) => {
