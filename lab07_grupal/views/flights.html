@@ -4,21 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vuelos Disponibles</title>
+    <!-- Agregamos los enlaces a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Vuelos Disponibles</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Origen</th>
-                <th>Destino</th>
-                <th>Precio</th>
-                <th>Aerolínea</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Aquí puedes usar JavaScript para obtener los datos de los vuelos desde tu backend y llenar la tabla -->
-        </tbody>
-    </table>
+    <div class="container mt-5">
+        <h1>Vuelos Disponibles</h1>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Origen</th>
+                        <th>Destino</th>
+                        <th>Precio</th>
+                        <th>Aerolínea</th>
+                    </tr>
+                </thead>
+                <tbody id="flightBody">
+                    <!-- Aquí puedes usar JavaScript para obtener los datos de los vuelos desde tu backend y llenar la tabla -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Agregamos los scripts de Bootstrap para que funcione correctamente -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

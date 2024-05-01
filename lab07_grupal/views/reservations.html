@@ -4,40 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservaciones</title>
+    <!-- Agregamos los enlaces a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Reservaciones</h1>
-    <h2>Reservas de Hotel</h2>
-    <table id="hotelTable">
-        <thead>
-            <tr>
-                <th>Cliente</th>
-                <th>Hotel</th>
-                <th>Fecha de inicio</th>
-                <th>Fecha de fin</th>
-                <th>Precio</th>
-            </tr>
-        </thead>
-        <tbody id="hotelBody">
-            <!-- Aquí se agregarán las filas de la tabla de reservas de hotel -->
-        </tbody>
-    </table>
+    <div class="container mt-5">
+        <h1>Reservaciones</h1>
 
-    <h2>Reservas de Vuelo</h2>
-    <table id="flightTable">
-        <thead>
-            <tr>
-                <th>Cliente</th>
-                <th>Vuelo</th>
-                <th>Fecha de salida</th>
-                <th>Fecha de llegada</th>
-                <th>Precio</th>
-            </tr>
-        </thead>
-        <tbody id="flightBody">
-            <!-- Aquí se agregarán las filas de la tabla de reservas de vuelo -->
-        </tbody>
-    </table>
+        <h2 class="mt-4">Reservas de Hotel</h2>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Hotel</th>
+                        <th>Fecha de inicio</th>
+                        <th>Fecha de fin</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="hotelBody">
+                    <!-- Aquí se agregarán las filas de la tabla de reservas de hotel -->
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="mt-4">Reservas de Vuelo</h2>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Vuelo</th>
+                        <th>Fecha de salida</th>
+                        <th>Fecha de llegada</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="flightBody">
+                    <!-- Aquí se agregarán las filas de la tabla de reservas de vuelo -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Agregamos los scripts de Bootstrap para que funcione correctamente -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
         // Función para obtener y llenar la tabla de reservas de hotel
