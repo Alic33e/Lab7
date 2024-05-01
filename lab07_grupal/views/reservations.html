@@ -8,7 +8,7 @@
 <body>
     <h1>Reservaciones</h1>
     <h2>Reservas de Hotel</h2>
-    <table>
+    <table id="hotelTable">
         <thead>
             <tr>
                 <th>Cliente</th>
@@ -18,13 +18,13 @@
                 <th>Precio</th>
             </tr>
         </thead>
-        <tbody>
-            <!-- Aquí puedes usar JavaScript para obtener los datos de las reservas de hotel desde tu backend y llenar la tabla -->
+        <tbody id="hotelBody">
+            <!-- Aquí se agregarán las filas de la tabla de reservas de hotel -->
         </tbody>
     </table>
 
     <h2>Reservas de Vuelo</h2>
-    <table>
+    <table id="flightTable">
         <thead>
             <tr>
                 <th>Cliente</th>
@@ -34,9 +34,47 @@
                 <th>Precio</th>
             </tr>
         </thead>
-        <tbody>
-            <!-- Aquí puedes usar JavaScript para obtener los datos de las reservas de vuelo desde tu backend y llenar la tabla -->
+        <tbody id="flightBody">
+            <!-- Aquí se agregarán las filas de la tabla de reservas de vuelo -->
         </tbody>
     </table>
+
+    <script>
+        // Función para obtener y llenar la tabla de reservas de hotel
+        fetch('/api/hotelReservations')
+            .then(response => response.json())
+            .then(data => {
+                const hotelBody = document.getElementById('hotelBody');
+                data.forEach(reservation => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${reservation.customer_id}</td>
+                        <td>${reservation.hotel_id}</td>
+                        <td>${reservation.date_start}</td>
+                        <td>${reservation.date_end}</td>
+                        <td>${reservation.price}</td>
+                    `;
+                    hotelBody.appendChild(row);
+                });
+            });
+
+        // Función para obtener y llenar la tabla de reservas de vuelo
+        fetch('/api/flights')
+            .then(response => response.json())
+            .then(data => {
+                const flightBody = document.getElementById('flightBody');
+                data.forEach(reservation => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${reservation.customer_id}</td>
+                        <td>${reservation.fly_id}</td>
+                        <td>${reservation.departure_date}</td>
+                        <td>${reservation.arrival_date}</td>
+                        <td>${reservation.price}</td>
+                    `;
+                    flightBody.appendChild(row);
+                });
+            });
+    </script>
 </body>
 </html>

@@ -27,12 +27,12 @@ connectDB()
     console.error("Error al conectar a la base de datos:", err);
   });
 
-app.use("/customer", customerRoutes);
+app.use("/customers", customerRoutes);
 app.use("/flights", flyRoutes);
-app.use("/hotel", hotelRoutes);
-app.use("/reservation", reservationRoutes);
-app.use("/ticket", ticketRoutes);
-app.use("/tour", tourRoutes);
+app.use("/hotels", hotelRoutes);
+app.use("/reservations", reservationRoutes);
+app.use("/tickets", ticketRoutes);
+app.use("/tours", tourRoutes);
 
 app.use(logger("dev"));
 
@@ -41,15 +41,15 @@ app.use(express.static("public"));
 app.get("/", (_, res) => {
   res.sendFile(process.cwd() + "/views/index.html");
 
-  app.get("/hotels", (_, res) => {
+  app.get("/hotel", (_, res) => {
     res.sendFile(process.cwd() + "/views/hotels.html");
   });
 
-  app.get("/flights", (_, res) => {
+  app.get("/flight", (_, res) => {
     res.sendFile(process.cwd() + "/views/flights.html");
   });
 
-  app.get("/reservations", (_, res) => {
+  app.get("/reservation", (_, res) => {
     res.sendFile(process.cwd() + "/views/reservations.html");
   });
 });
