@@ -26,7 +26,7 @@ connectDB()
   .catch((err) => {
     console.error("Error al conectar a la base de datos:", err);
   });
-
+  
 app.use("/customers", customerRoutes);
 app.use("/flights", flyRoutes);
 app.use("/hotels", hotelRoutes);
@@ -41,15 +41,39 @@ app.use(express.static("public"));
 app.get("/", (_, res) => {
   res.sendFile(process.cwd() + "/views/index.html");
 
-  app.get("/hotel", (_, res) => {
-    res.sendFile(process.cwd() + "/views/hotels.html");
+  app.get("/404", (_, res) => {
+    res.sendFile(process.cwd() + "/views/404.html");
   });
 
-  app.get("/flight", (_, res) => {
-    res.sendFile(process.cwd() + "/views/flights.html");
+  app.get("/about", (_, res) => {
+    res.sendFile(process.cwd() + "/views/about.html");
   });
 
-  app.get("/reservation", (_, res) => {
-    res.sendFile(process.cwd() + "/views/reservations.html");
+  app.get("/booking", (_, res) => {
+    res.sendFile(process.cwd() + "/views/booking.html");
+  });
+
+  app.get("/contact", (_, res) => {
+    res.sendFile(process.cwd() + "/views/contact.html");
+  });
+
+  app.get("/destination", (_, res) => {
+    res.sendFile(process.cwd() + "/views/destination.html");
+  });
+
+  app.get("/package", (_, res) => {
+    res.sendFile(process.cwd() + "/views/package.html");
+  });
+
+  app.get("/service", (_, res) => {
+    res.sendFile(process.cwd() + "/views/service.html");
+  });
+
+  app.get("/team", (_, res) => {
+    res.sendFile(process.cwd() + "/views/team.html");
+  });
+
+  app.get("/testimonial", (_, res) => {
+    res.sendFile(process.cwd() + "/views/testimonial.html");
   });
 });

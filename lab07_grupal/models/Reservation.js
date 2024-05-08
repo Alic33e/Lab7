@@ -4,8 +4,8 @@ const { Schema } = mongoose;
 const ReservationSchema = new Schema({
   id: { type: String, required: true },
   date_reservation: { type: Date, required: true },
-  tour_id: { type: Number, required: true },
-  hotel_id: { type: Number, default: null },
+  tour_id: { type: String, required: true },
+  hotel_id: { type: String, default: null },
   customer_id: { type: String, required: true },
   date_start: { type: Date, required: true },
   date_end: { type: Date, default: null },
